@@ -38,16 +38,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.btn_intent_2:
-                // TODO: ???
+                intent.setAction(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:0911434584"));
+                startActivity(intent);
+                // TODO: Call phone
                 break;
             case R.id.btn_intent_3:
-                // TODO: ???
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://www.google.co.th/maps/place/Dara+Academy/@18.7992441,99.0099283,17z/data=!3m1!4b1!4m5!3m4!1s0x30da3ab4ce4e63c9:0xe3ff6b0d9af52459!8m2!3d18.799239!4d99.012117"));
+                startActivity(intent);
+                // TODO: Go to google map
                 break;
             case R.id.btn_intent_4:
-                // TODO: ???
+                intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
+
+                startActivity(intent);
+                // TODO: go to camera
                 break;
             case R.id.btn_intent_5:
-                // TODO: ???
+                intent.setAction(Intent.ACTION_VOICE_COMMAND);
+                startActivity(intent);
+                // TODO: voice command
                 break;
 
         }
